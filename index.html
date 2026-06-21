@@ -1,229 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Questions Bank</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Past Questions Bank</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background-color:#f4f7fc;
+        color:#333;
+        line-height:1.6;
+    }
+
+    header{
+        background:#0d6efd;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    header h1{
+        margin-bottom:10px;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin:0 10px;
+        font-weight:bold;
+    }
+
+    nav a:hover{
+        text-decoration:underline;
+    }
+
+    .hero{
+        text-align:center;
+        padding:60px 20px;
+        background:white;
+    }
+
+    .hero h2{
+        font-size:2.5rem;
+        color:#0d6efd;
+        margin-bottom:15px;
+    }
+
+    .hero p{
+        max-width:700px;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    button{
+        background:#0d6efd;
+        color:white;
+        border:none;
+        padding:12px 20px;
+        margin:5px;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    button:hover{
+        background:#084298;
+    }
+
+    section{
+        padding:40px 10%;
+    }
+
+    h2{
+        margin-bottom:20px;
+        color:#0d6efd;
+    }
+
+    .search-box{
+        text-align:center;
+    }
+
+    .search-box input{
+        width:60%;
+        padding:12px;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
+
+    .subjects{
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .subject-card{
+        background:white;
+        padding:15px;
+        border-radius:8px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        flex:1 1 200px;
+        text-align:center;
+    }
+
+    .question-container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+    }
+
+    .question-card{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .question-card h3{
+        color:#0d6efd;
+        margin-bottom:10px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        background:white;
+    }
+
+    table th,
+    table td{
+        border:1px solid #ddd;
+        padding:12px;
+        text-align:center;
+    }
+
+    table th{
+        background:#0d6efd;
+        color:white;
+    }
+
+    ul, ol{
+        padding-left:20px;
+    }
+
+    blockquote{
+        background:white;
+        padding:20px;
+        margin-bottom:15px;
+        border-left:5px solid #0d6efd;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .cta{
+        text-align:center;
+        background:#0d6efd;
+        color:white;
+        padding:50px 20px;
+    }
+
+    .cta h2{
+        color:white;
+    }
+
+    footer{
+        background:#212529;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    @media(max-width:768px){
+        .search-box input{
+            width:100%;
+        }
+
+        nav a{
+            display:block;
+            margin:10px 0;
+        }
+
+        .hero h2{
+            font-size:2rem;
+        }
+    }
+</style>
+
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>📚 Past Questions Bank</h1>
+<header>
+    <h1>📚 Past Questions Bank</h1>
 
-        <nav>
-            <a href="#">Home</a> |
-            <a href="#">Browse Questions</a> |
-            <a href="#">Subjects</a> |
-            <a href="#">Upload</a> |
-            <a href="#">Login</a>
-        </nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Browse Questions</a>
+        <a href="#">Subjects</a>
+        <a href="#">Upload</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
 
-        <hr>
-    </header>
+<section class="hero">
+    <h2>Study Smarter, Not Harder</h2>
 
-    <!-- Hero Section -->
-    <section>
-        <h2>Study Smarter, Not Harder</h2>
+    <p>
+        Access thousands of WASSCE and University past questions,
+        answers and explanations to help you prepare for exams and
+        improve your academic performance.
+    </p>
 
-        <p>
-            Access thousands of WASSCE and University past examination questions,
-            answers, and explanations in one place. Prepare effectively and boost
-            your chances of academic success.
-        </p>
+    <button>Start Studying</button>
+    <button>Upload Questions</button>
+</section>
 
-        <button>Start Studying</button>
-        <button>Upload Questions</button>
-    </section>
+<section>
+    <h2>🔍 Search Questions</h2>
 
-    <hr>
+    <div class="search-box">
+        <input type="text" placeholder="Search by subject, topic, year or institution">
+        <button>Search</button>
+    </div>
+</section>
 
-    <!-- Search Section -->
-    <section>
-        <h2>🔍 Find Past Questions</h2>
+<section>
+    <h2>📖 Featured Subjects</h2>
 
-        <form>
-            <input type="text" placeholder="Search by subject, topic, year or institution" size="50">
-            <button type="submit">Search</button>
-        </form>
+    <div class="subjects">
+        <div class="subject-card">Mathematics</div>
+        <div class="subject-card">English Language</div>
+        <div class="subject-card">Integrated Science</div>
+        <div class="subject-card">Physics</div>
+        <div class="subject-card">Chemistry</div>
+        <div class="subject-card">Biology</div>
+        <div class="subject-card">Computer Science</div>
+        <div class="subject-card">Database Systems</div>
+    </div>
+</section>
 
-        <p><strong>Popular Searches:</strong></p>
-        <ul>
-            <li>WASSCE Mathematics 2024</li>
-            <li>Programming Fundamentals</li>
-            <li>Database Systems</li>
-            <li>Computer Networks</li>
-        </ul>
-    </section>
+<section>
+    <h2>🔥 Latest Questions</h2>
 
-    <hr>
+    <div class="question-container">
 
-    <!-- Featured Subjects -->
-    <section>
-        <h2>📖 Featured Subjects</h2>
-
-        <ul>
-            <li>➕ Mathematics</li>
-            <li>📚 English Language</li>
-            <li>🧪 Integrated Science</li>
-            <li>🌍 Social Studies</li>
-            <li>⚛ Physics</li>
-            <li>🧫 Biology</li>
-            <li>🧬 Chemistry</li>
-            <li>💻 Computer Science</li>
-            <li>🖥 Programming Fundamentals</li>
-            <li>🗄 Database Systems</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <!-- Latest Questions -->
-    <section>
-        <h2>🔥 Latest Questions Added</h2>
-
-        <article>
-            <h3>Mathematics - 2024</h3>
-            <p>
-                Solve the quadratic equation:
-                x² + 7x + 12 = 0
-            </p>
+        <div class="question-card">
+            <h3>Mathematics 2024</h3>
+            <p>Solve the quadratic equation x² + 7x + 12 = 0.</p>
             <button>View Question</button>
-        </article>
+        </div>
 
-        <br>
-
-        <article>
-            <h3>Programming Fundamentals - 2025</h3>
-            <p>
-                Explain the difference between a while loop and a for loop.
-            </p>
+        <div class="question-card">
+            <h3>Programming Fundamentals</h3>
+            <p>Explain the difference between a while loop and a for loop.</p>
             <button>View Question</button>
-        </article>
+        </div>
 
-        <br>
-
-        <article>
-            <h3>Database Systems - 2025</h3>
-            <p>
-                Define primary key and foreign key with examples.
-            </p>
+        <div class="question-card">
+            <h3>Database Systems</h3>
+            <p>Define Primary Key and Foreign Key with examples.</p>
             <button>View Question</button>
-        </article>
-    </section>
+        </div>
 
-    <hr>
+    </div>
+</section>
 
-    <!-- Statistics -->
-    <section>
-        <h2>📊 Platform Statistics</h2>
+<section>
+    <h2>📊 Platform Statistics</h2>
 
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Total Questions</th>
-                <th>Subjects</th>
-                <th>Institutions</th>
-                <th>Active Students</th>
-            </tr>
+    <table>
+        <tr>
+            <th>Total Questions</th>
+            <th>Subjects</th>
+            <th>Institutions</th>
+            <th>Students</th>
+        </tr>
 
-            <tr>
-                <td>12,500+</td>
-                <td>60+</td>
-                <td>120+</td>
-                <td>8,000+</td>
-            </tr>
-        </table>
-    </section>
+        <tr>
+            <td>12,500+</td>
+            <td>60+</td>
+            <td>120+</td>
+            <td>8,000+</td>
+        </tr>
+    </table>
+</section>
 
-    <hr>
+<section>
+    <h2>🎯 Why Use Our Platform?</h2>
 
-    <!-- Benefits -->
-    <section>
-        <h2>🎯 Why Use Past Questions Bank?</h2>
+    <ul>
+        <li>Access thousands of past questions.</li>
+        <li>Learn with answers and explanations.</li>
+        <li>Practice exam-style questions.</li>
+        <li>Save questions for revision.</li>
+        <li>Improve your grades and confidence.</li>
+    </ul>
+</section>
 
-        <ul>
-            <li>Access past questions anytime, anywhere.</li>
-            <li>Learn from detailed answers and explanations.</li>
-            <li>Improve your exam preparation strategy.</li>
-            <li>Discover frequently repeated questions.</li>
-            <li>Save and bookmark important questions.</li>
-            <li>Contribute and help other students learn.</li>
-        </ul>
-    </section>
+<section>
+    <h2>⭐ Student Success Stories</h2>
 
-    <hr>
+    <blockquote>
+        "This platform helped me score an A1 in WASSCE Mathematics."
+        <br><strong>- Kwame</strong>
+    </blockquote>
 
-    <!-- Study Tips -->
-    <section>
-        <h2>💡 Exam Preparation Tips</h2>
+    <blockquote>
+        "The explanations are simple and easy to understand."
+        <br><strong>- Akosua</strong>
+    </blockquote>
+</section>
 
-        <ol>
-            <li>Practice at least 10 past questions every day.</li>
-            <li>Focus on topics that appear frequently in exams.</li>
-            <li>Time yourself when solving questions.</li>
-            <li>Review solutions and understand your mistakes.</li>
-            <li>Create a revision timetable and follow it consistently.</li>
-        </ol>
-    </section>
+<section class="cta">
+    <h2>🚀 Ready to Start Learning?</h2>
 
-    <hr>
+    <p>
+        Join thousands of students improving their grades with Past Questions Bank.
+    </p>
 
-    <!-- Testimonials -->
-    <section>
-        <h2>⭐ Student Success Stories</h2>
+    <button>Create Free Account</button>
+</section>
 
-        <blockquote>
-            "Using Past Questions Bank helped me score an A1 in Mathematics during WASSCE."
-            <br><strong>- Kwame, SHS Graduate</strong>
-        </blockquote>
-
-        <blockquote>
-            "I passed my Database Systems exam because I practiced similar questions found here."
-            <br><strong>- Akosua, University Student</strong>
-        </blockquote>
-
-        <blockquote>
-            "The explanations are simple and easy to understand."
-            <br><strong>- Emmanuel, Level 200 Student</strong>
-        </blockquote>
-    </section>
-
-    <hr>
-
-    <!-- Call To Action -->
-    <section>
-        <h2>🚀 Start Your Success Journey Today</h2>
-
-        <p>
-            Join thousands of students who are improving their grades through
-            effective revision using past examination questions.
-        </p>
-
-        <button>Create Free Account</button>
-    </section>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <h3>Past Questions Bank</h3>
-
-        <p>
-            Your trusted source for WASSCE and University examination preparation.
-        </p>
-
-        <p>
-            Email: support@pastquestionsbank.com
-        </p>
-
-        <p>
-            Phone: +233 59 204 6641S
-        </p>
-
-        <p>
-            &copy; 2026 Past Questions Bank. All Rights Reserved.
-        </p>
-    </footer>
+<footer>
+    <h3>Past Questions Bank</h3>
+    <p>Your trusted source for WASSCE and University exam preparation.</p>
+    <p>&copy; 2026 All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
