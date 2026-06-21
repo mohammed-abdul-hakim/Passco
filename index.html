@@ -198,12 +198,10 @@
     <h1>📚 Past Questions Bank</h1>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Browse Questions</a>
-        <a href="#">Subjects</a>
-        <a href="#">Upload</a>
-        <a href="#">Login</a>
-    </nav>
+    <a href="index.html">Home</a>
+    <a href="questions.php">Browse Questions</a>
+    <a href="upload.html">Upload</a>
+</nav>
 </header>
 
 <section class="hero">
@@ -214,17 +212,27 @@
         answers and explanations to help you prepare for exams and
         improve your academic performance.
     </p>
+    <a href="questions.php">
+    <button>Browse Questions</button>
+</a>
 
     <button>Start Studying</button>
     <button>Upload Questions</button>
 </section>
 
-<section>
+
+<section align="center">
     <h2>🔍 Search Questions</h2>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search by subject, topic, year or institution">
-        <button>Search</button>
+    <div <form action="search.php" method="GET">
+
+    <input type="text"
+           name="search"
+           placeholder="Search questions...">
+
+    <button type="submit">Search</button>
+
+</form>
     </div>
 </section>
 
